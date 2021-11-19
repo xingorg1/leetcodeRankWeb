@@ -11,7 +11,7 @@ export const userHref = [
   'https://leetcode-cn.com/problems/binary-search/',
   'https://leetcode-cn.com/u/boring-karektx/',
   'https://leetcode-cn.com/u/ping-zhong-zi/',
-  // 'https://leetcode-cn.com/progress/', // 这个人不是自己的账号页面，地址提交错误
+  'https://leetcode-cn.com/u/will-6f/',
   'https://leetcode-cn.com/u/MyEnglandGirl/'
 ]
 export const userCount = [
@@ -27,7 +27,8 @@ export const userCount = [
   'zou-chang-qing',
   'boring-karektx',
   'ping-zhong-zi',
-  'MyEnglandGirl'
+  'MyEnglandGirl',
+  'will-6f'
 ]
 
 export const tableColumns = [{
