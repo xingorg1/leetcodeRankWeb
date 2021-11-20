@@ -48,8 +48,8 @@
         </a-typography-link>
       </span>
     </template>
-    <template #title>算法小分队刷题排行榜</template>
-    <template #footer>各位只管加油~ 我们相约顶峰。</template>
+    <template #title>🌪 算法小分队刷题排行榜</template>
+    <template #footer>各位只管加油~ 我们相约顶峰。💪💪💪</template>
   </a-table>
 </template>
 <script setup>
@@ -75,25 +75,32 @@ let promiseArr = userCount.map((userSlug) => {
 // console.log(Promise);
 Promise.all(promiseArr)
   .then((res) => {
-    message.success("面对疾风吧！");
     console.log(res);
+    message.success("面对疾风吧！😏😏😏");
     if (res && res.length > 0) {
       res.forEach((item, i) => {
-        let newData = item.data.data.userProfilePublicProfile;
-        const { realName, userAvatar, userSlug } = newData.profile;
-        const { acTotal, totalSubmissions, acSubmissions } =
-          newData.submissionProgress;
-        // console.log(newData);
-        data.push({
-          key: i + 1 + "",
-          rank: 1,
-          realName,
-          userAvatar,
-          userSlug,
-          acTotal,
-          totalSubmissions,
-          acSubmissions,
-        });
+        try {
+          let newData = item.data.data.userProfilePublicProfile;
+          // if(!newData) return 
+          const { realName, userAvatar, userSlug } = newData.profile;
+          const { acTotal, totalSubmissions, acSubmissions } =
+            newData.submissionProgress;
+          // console.log(newData);
+          data.push({
+            key: i + 1 + "",
+            rank: 1,
+            realName,
+            userAvatar,
+            userSlug,
+            acTotal,
+            totalSubmissions,
+            acSubmissions,
+          });
+        }
+        catch(err) {
+          console.log(err)
+          message.error("😯阿欧! 有人账号404了🙈~ 快去告诉石头姐！");
+        }
       });
       data.sort((a, b) => -a.acTotal + b.acTotal);
       data.map((item, i) => (item.rank = i + 1));
@@ -101,7 +108,7 @@ Promise.all(promiseArr)
   })
   .catch((err) => {
     console.log(err);
-    message.error("阿欧，报错了~ 快去告诉小石头！");
+    message.error("😯阿欧! leetcode不肯给数据🙈~ 快去告诉石头姐！");
   })
   .finally(() => {
     tableLoading.value = false;
@@ -121,6 +128,7 @@ axios
   })
   .then((res) => {
     let newData = res.data.data.userProfilePublicProfile;
+    if(!newData) return 
     const { realName, userAvatar, userSlug } = newData.profile;
     const { acTotal, totalSubmissions, acSubmissions } =
       newData.submissionProgress;
@@ -145,10 +153,13 @@ axios
 .ant-table-wrapper {
   max-width: 900px;
   margin: 0 auto;
-}
-.ant-table-title {
-  font-size: 18px;
-  font-weight: 900;
+  .ant-table .ant-table-title {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    background: #cf1423;
+    color: #fff;
+  }
 }
 .ant-table .ant-table-footer {
   color: #f40;

@@ -1,4 +1,4 @@
-.ant-table-wrapper{max-width:900px;margin:0 auto}.ant-table-title{font-size:18px;font-weight:900}.ant-table .ant-table-footer{color:#f40;text-align:right}th.column-money,td.column-money{text-align:right!important}.user-rank{text-align:center}tbody .user-rank{text-align:center;font-size:16px;font-weight:900}/*!
+.ant-table-wrapper{max-width:900px;margin:0 auto}.ant-table-wrapper .ant-table .ant-table-title{font-size:18px;font-weight:900;text-align:center;background:#cf1423;color:#fff}.ant-table .ant-table-footer{color:#f40;text-align:right}th.column-money,td.column-money{text-align:right!important}.user-rank{text-align:center}tbody .user-rank{text-align:center;font-size:16px;font-weight:900}/*!
  * 
  * ant-design-vue v2.2.8
  *
