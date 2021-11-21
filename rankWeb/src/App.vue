@@ -49,15 +49,31 @@
       </span>
     </template>
     <template #title>🌪 算法小分队刷题排行榜</template>
-    <template #footer>各位只管加油~ 我们相约顶峰。💪💪💪</template>
+    <template #footer>
+      <a href="https://gitee.com/xingorg1/algorithmic-clock-out/issues" target="_blank" style="float: left">[ 打卡地址 ]</a>
+      各位只管加油~ 我们相约顶峰。💪💪💪
+    </template>
   </a-table>
 </template>
 <script setup>
 import { userCount, tableColumns } from "./configs/usercount";
-import { message } from "ant-design-vue";
+import { message, notification } from "ant-design-vue";
 import { FireTwoTone, UserOutlined } from "@ant-design/icons-vue";
 import axios from "axios";
-import { reactive, ref } from "@vue/reactivity";
+import { reactive, ref, onMounted} from "vue";
+
+onMounted(() => {
+  // 所以关闭群邀请，请加我好友并备注「算法」拉你进群。。
+  if(localStorage.getItem('qdyj-notice')) return
+  notification.open({
+    message: '算法小分队进阶打卡交流群',
+    duration: null,
+    description: '力求做专注算法的高质量成长社群，想加群的同学可以在公众号「前端印记」后台回复关键字「算法」。如未下定决心学算法请不要盲目加群。',
+    onClose: () => {
+      localStorage.setItem('qdyj-notice', true)
+    },
+  });
+})
 const data = reactive([]);
 const tableLoading = ref(true);
 let promiseArr = userCount.map((userSlug) => {
