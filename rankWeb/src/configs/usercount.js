@@ -21,14 +21,15 @@ export const userCount = [
   'gu-yao-c',
   'adah-r',
   'inspiring-sinoussi1ht',
-  'pang-pang-2',
+  // 'pang-pang-2',
   'zhao-jia-d',
   'bei-xi-zi-du',
   'zou-chang-qing',
   'boring-karektx',
   'ping-zhong-zi',
   'MyEnglandGirl',
-  'will-6f'
+  'will-6f',
+  'fuyoujie2020'
 ]
 
 export const tableColumns = [{
