@@ -8,6 +8,9 @@
     :pagination="{
       pageSize: 20,
     }"
+    :locale="{
+      emptyText: '咋回事儿？没有数据呢！还是问问小石头吧 🙈'
+    }"
   >
     <template #name="{ text }">
       <a>{{ text }}</a>
@@ -50,7 +53,11 @@
     </template>
     <template #title>🌪 算法小分队刷题排行榜</template>
     <template #footer>
-      <a href="https://gitee.com/xingorg1/algorithmic-clock-out/issues" target="_blank" style="float: left">[ 打卡地址 ]</a>
+      <span style="float: left; color: #999;">
+        <a href="https://github.com/xingorg1/leetcodeRank" target="_blank" style="margin-right: 10px">【 打卡地址 】</a>
+        (打不开左边Github地址的可以先看
+        <a href="https://gitee.com/xingorg1/algorithmic-clock-out" target="_blank">旧打卡地址</a>)
+      </span>
       各位只管加油~ 我们相约顶峰。💪💪💪
     </template>
   </a-table>
