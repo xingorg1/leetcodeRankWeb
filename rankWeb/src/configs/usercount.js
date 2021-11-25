@@ -4,7 +4,7 @@ export const userHref = [
   'https://leetcode-cn.com/u/gu-yao-c/',
   'https://leetcode-cn.com/u/adah-r/',
   'https://leetcode-cn.com/u/inspiring-sinoussi1ht/',
-  'https://leetcode-cn.com/u/pang-pang-2/',
+  'https://leetcode-cn.com/u/laiyidakeaiduo/',
   'https://leetcode-cn.com/u/zhao-jia-d/',
   'https://leetcode-cn.com/u/bei-xi-zi-du/',
   'https://leetcode-cn.com/u/zou-chang-qing/',
@@ -12,6 +12,7 @@ export const userHref = [
   'https://leetcode-cn.com/u/boring-karektx/',
   'https://leetcode-cn.com/u/ping-zhong-zi/',
   'https://leetcode-cn.com/u/will-6f/',
+  'https://leetcode-cn.com/u/fuyoujie2020/',
   'https://leetcode-cn.com/u/MyEnglandGirl/'
 ]
 export const userCount = [
@@ -21,7 +22,7 @@ export const userCount = [
   'gu-yao-c',
   'adah-r',
   'inspiring-sinoussi1ht',
-  // 'pang-pang-2',
+  'laiyidakeaiduo',
   'zhao-jia-d',
   'bei-xi-zi-du',
   'zou-chang-qing',
