@@ -13,7 +13,8 @@ export const userHref = [
   'https://leetcode-cn.com/u/ping-zhong-zi/',
   'https://leetcode-cn.com/u/will-6f/',
   'https://leetcode-cn.com/u/fuyoujie2020/',
-  'https://leetcode-cn.com/u/MyEnglandGirl/'
+  'https://leetcode-cn.com/u/MyEnglandGirl/',
+  'https://leetcode-cn.com/u/callmew/'
 ]
 export const userCount = [
   'xingorg1',
@@ -30,7 +31,8 @@ export const userCount = [
   'ping-zhong-zi',
   'MyEnglandGirl',
   'will-6f',
-  'fuyoujie2020'
+  'fuyoujie2020',
+  'callmew'
 ]
 
 export const tableColumns = [{
